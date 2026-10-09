@@ -1,0 +1,21 @@
+nav {
+    li {
+        display: inline-block;
+    }
+
+    li a {
+        color: #EDD307;
+        text-decoration: none;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
+    }
+
+    background-color: #211DC2;
+    margin: 0;
+}

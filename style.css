@@ -89,3 +89,31 @@ main {
     padding: 2rem;
     color: #211DC2;
 }
+section.katten {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.75rem;
+
+    img {
+        width: 60%;
+        max-width: 300px;
+    }
+
+    p {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 1rem;
+        box-sizing: border-box;
+        color: #211DC2;
+        background-color: #fff;
+    }
+}
+
+main.kattenmain {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 2rem;
+}

@@ -89,7 +89,9 @@ main {
     padding: 2rem;
     color: #211DC2;
 }
-section.katten {
+
+section.katten,
+section.konijnen {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -107,12 +109,15 @@ section.katten {
         margin: 0;
         padding: 1rem;
         box-sizing: border-box;
-        color: #211DC2;
-        background-color: #fff;
+        color: #EDD307;
+        background-color: #211DC2;
+        border: 2px solid #000;
+        border-radius: 2rem;
     }
 }
 
-main.kattenmain {
+main.kattenmain,
+main.konijnenmain {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     row-gap: 2rem;

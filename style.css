@@ -116,6 +116,27 @@ section.konijnen {
     }
 }
 
+section.opleiding {
+    box-sizing: border-box;
+    padding: 1rem;
+    color: #EDD307;
+    background-color: #211DC2;
+    border: 2px solid #000;
+    border-radius: 0;
+    width: 50%;
+}
+
+section.opleiding h2,
+section.opleiding p {
+    margin: 0;
+}
+
+section.opleiding p {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
 main.kattenmain,
 main.konijnenmain {
     display: grid;

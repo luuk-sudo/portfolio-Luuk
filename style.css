@@ -116,7 +116,8 @@ section.konijnen {
     }
 }
 
-section.opleiding {
+section.opleiding,
+section.wie-ben-ik {
     box-sizing: border-box;
     padding: 1rem;
     color: #EDD307;
@@ -124,14 +125,22 @@ section.opleiding {
     border: 2px solid #000;
     border-radius: 0;
     width: 50%;
+    a {
+        color: #EDD307;
+        font-weight: bold;
+        text-decoration: none;
+    }
 }
 
 section.opleiding h2,
-section.opleiding p {
+section.opleiding p,
+section.wie-ben-ik h2,
+section.wie-ben-ik p {
     margin: 0;
 }
 
-section.opleiding p {
+section.opleiding p,
+section.wie-ben-ik p {
     width: 100%;
     min-width: 0;
     box-sizing: border-box;

@@ -116,8 +116,23 @@ section.konijnen {
     }
 }
 
+section.konijnen img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+section.katten img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
 section.opleiding,
-section.wie-ben-ik {
+section.wie-ben-ik,
+section.background-info {
     box-sizing: border-box;
     padding: 1rem;
     color: #EDD307;
@@ -135,12 +150,15 @@ section.wie-ben-ik {
 section.opleiding h2,
 section.opleiding p,
 section.wie-ben-ik h2,
-section.wie-ben-ik p {
+section.wie-ben-ik p,
+section.background-info h2,
+section.background-info p {
     margin: 0;
 }
 
 section.opleiding p,
-section.wie-ben-ik p {
+section.wie-ben-ik p,
+section.background-info p {
     width: 100%;
     min-width: 0;
     box-sizing: border-box;

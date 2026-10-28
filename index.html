@@ -22,6 +22,41 @@
             <li><a href="interview.html">Interview</a></li>
         </ul>
     </nav>
+    <section class="contact">
+        <h2>contact</h2>
+        <p>wil je contact opnemen voor bijvoorbeeld vragen over het werken bij de albert heijn? vul hier je gegevens
+            in.</p>
+        <form id="contact-form">
+            <input type="text" class="name-field" placeholder="Voornaam" minlength="2" maxlength="50"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*"
+                title="Gebruik 2 tot en met 50 letters, zonder cijfers." required>
+            <input type="text" class="name-field" placeholder="tussenvoegsel" minlength="2" maxlength="50"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*"
+                title="Gebruik 2 tot en met 50 letters, zonder cijfers.">
+            <input type="text" class="name-field" placeholder="achternaam" minlength="2" maxlength="50"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*"
+                title="Gebruik 2 tot en met 50 letters, zonder cijfers." required>
+            <fieldset>
+                <legend>Geslacht</legend>
+                <label><input type="radio" name="geslacht" value="man" checked> Man</label>
+                <label><input type="radio" name="geslacht" value="vrouw"> Vrouw</label>
+                <label><input type="radio" name="geslacht" value="Anders"> Anders</label>
+                <label><input type="radio" name="geslacht" value="liever-niet"> Zeg ik liever niet</label>
+            </fieldset>
+            <input type="email" placeholder="e-mail" required>
+            <input type="tel" placeholder="telefoonnummer" minlength="8" maxlength="20" pattern="[0-9]{8,20}"
+                title="Gebruik 8 tot en met 20 cijfers.">
+            <input type="submit" value="Verzenden">
+            <p id="contact-status" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+    <script>
+        document.querySelectorAll(".name-field").forEach(function (field) {
+            field.addEventListener("input", function () {
+                field.value = field.value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ' -]/g, "");
+            });
+        });
+    </script>
 </body>
 
 </html>

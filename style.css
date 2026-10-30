@@ -208,3 +208,16 @@ section.begin-info{
     font-size: 32px;
     color: #211DC2;
 }
+table{
+    background-color: #211DC2;
+    color: #EDD307;
+}
+
+section.tabel td:first-child {
+    font-weight: bold;
+}
+
+section.tabel th,
+section.tabel td {
+    padding: 0.5rem 0.75rem;
+}

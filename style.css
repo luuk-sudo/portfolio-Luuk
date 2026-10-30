@@ -204,3 +204,7 @@ main.konijnenmain {
 legend{
     text-decoration: none;
 }
+section.begin-info{
+    font-size: 32px;
+    color: #211DC2;
+}

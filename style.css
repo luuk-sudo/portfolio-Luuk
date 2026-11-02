@@ -133,7 +133,8 @@ section.katten img {
 section.opleiding,
 section.wie-ben-ik,
 section.background-info,
-section.contact {
+section.contact,
+section.links {
     box-sizing: border-box;
     padding: 1rem;
     color: #EDD307;
@@ -146,7 +147,8 @@ section.contact {
 section.opleiding a,
 section.wie-ben-ik a,
 section.background-info a,
-section.contact a {
+section.contact a,
+section.links a {
     color: #EDD307;
     font-weight: bold;
     text-decoration: none;
@@ -159,7 +161,9 @@ section.wie-ben-ik p,
 section.background-info h2,
 section.background-info p,
 section.contact h2,
-section.contact p {
+section.contact p,
+section.links h2,
+section.tabel h2 {
     margin: 0;
 }
 

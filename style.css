@@ -151,6 +151,28 @@ section.foto.school img {
     height: auto;
 }
 
+section.foto.luuk img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+}
+
+section.foto.luuk {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+section.foto.luuk iframe {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+}
+
 section.opleiding,
 section.wie-ben-ik,
 section.background-info,
@@ -164,6 +186,51 @@ section.tabel {
     border: 2px solid #000;
     border-radius: 2rem;
     width: 50%;
+}
+
+section.tabel {
+    margin-left: auto;
+}
+
+main.aboutme {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 1.5rem;
+}
+
+main.aboutme > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+}
+
+main.aboutme section.wie-ben-ik,
+main.aboutme section.opleiding,
+main.aboutme section.background-info,
+main.aboutme section.tabel {
+    width: 100%;
+}
+
+main.aboutme section.tabel {
+    margin-left: 0;
+}
+
+main.aboutme section.foto.luuk img {
+    margin-left: 0;
+}
+
+@media (max-width: 900px) {
+    section.foto.luuk {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 700px) {
+    main.aboutme {
+        grid-template-columns: 1fr;
+    }
 }
 
 section.opleiding a,
@@ -221,6 +288,38 @@ section.contact fieldset {
     width: 100%;
 }
 
+.contact-layout {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-sizing: border-box;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-layout > img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+@media (max-width: 700px) {
+    .contact-layout {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-layout section.contact {
+        width: 100%;
+    }
+
+    .contact-layout > img {
+        max-width: 200px;
+        align-self: center;
+    }
+}
+
 main.kattenmain,
 main.konijnenmain {
     display: grid;
@@ -242,7 +341,13 @@ table{
 
 .table-wrapper {
     max-width: 100%;
-    overflow-x: auto;
+    overflow: hidden;
+}
+
+section.tabel table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: clamp(0.55rem, 1vw, 0.875rem);
 }
 
 section.tabel td:first-child {
@@ -251,5 +356,31 @@ section.tabel td:first-child {
 
 section.tabel th,
 section.tabel td {
-    padding: 0.5rem 0.75rem;
+    padding: 0.25rem 0.1rem;
+    overflow-wrap: anywhere;
+}
+main.projecten-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding-top: 15rem;
+}
+
+section.placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+}
+
+section.placeholder img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+section.placeholder a {
+    color: #211DC2;
 }

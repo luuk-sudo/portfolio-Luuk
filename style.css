@@ -85,6 +85,66 @@ nav {
     padding: 0;
 }
 
+nav .nav-menu {
+    display: none;
+}
+
+@media (max-width: 875px) {
+    nav {
+        display: block;
+
+        .nav-menu {
+            display: block;
+            padding: 0.5rem;
+        }
+
+        .nav-menu summary {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            padding: 0.75rem;
+            border: 2px solid #EDD307;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .nav-menu summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .nav-menu summary span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #EDD307;
+        }
+
+        > ul {
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+        }
+
+        .nav-menu[open] + ul {
+            display: flex;
+        }
+
+        > ul > li {
+            display: block;
+        }
+
+        .dropdown-content {
+            position: static;
+            box-shadow: none;
+            border-radius: 0;
+        }
+    }
+}
+
 main {
     padding: 2rem;
     color: #211DC2;
@@ -176,6 +236,7 @@ section.foto.luuk iframe {
 section.opleiding,
 section.wie-ben-ik,
 section.background-info,
+section.interview-info,
 section.contact,
 section.links,
 section.tabel {
@@ -186,6 +247,31 @@ section.tabel {
     border: 2px solid #000;
     border-radius: 2rem;
     width: 50%;
+}
+
+main.interview-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+main.interview-content .interview-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    min-width: 0;
+}
+
+main.interview-content section.interview-info {
+    width: 100%;
+}
+
+main.interview-content .interview-photo img {
+    display: block;
+    width: 250%;
+    max-width: 300px;
+    height: auto;
 }
 
 section.tabel {
@@ -249,6 +335,8 @@ section.wie-ben-ik h2,
 section.wie-ben-ik p,
 section.background-info h2,
 section.background-info p,
+section.interview-info h2,
+section.interview-info p,
 section.contact h2,
 section.contact p,
 section.links h2,
@@ -259,10 +347,21 @@ section.tabel h2 {
 section.opleiding p,
 section.wie-ben-ik p,
 section.background-info p,
+section.interview-info p,
 section.contact p {
     width: 100%;
     min-width: 0;
     box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+    main.interview-content {
+        grid-template-columns: 1fr;
+    }
+
+    main.interview-content section.interview-info {
+        width: 100%;
+    }
 }
 
 section.contact form {
@@ -334,6 +433,41 @@ section.begin-info{
     font-size: 32px;
     color: #211DC2;
 }
+
+main.home-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    padding: 2rem 0;
+}
+
+.home-content {
+    min-width: 0;
+}
+
+.home-content section.contact,
+.home-content section.links {
+    width: 100%;
+}
+
+.home-photo {
+    display: block;
+    width: min(500px, 100%);
+    height: auto;
+    justify-self: center;
+    margin-top: 10rem;
+}
+
+@media (max-width: 700px) {
+    main.home-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .home-photo {
+        margin: 1rem auto 0;
+    }
+}
+
 table{
     background-color: #211DC2;
     color: #EDD307;
